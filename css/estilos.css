@@ -1,0 +1,204 @@
+*{
+  box-sizing: border-box;
+  outline: 1px solid limegreen; 
+  font-family: 'Fira Sans', sans-serif;
+ }
+
+ body{
+
+     align-items: top ;
+     height: 100vh;
+     font-family: 'Fira Sans', sans-serif;
+     margin: 1em;
+ }
+
+ #barra-navegacion{
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);/* SE DIVIDE EN SEIS COLUMNAS LOS SECTION DENTRO DE NAV CLASS */
+  grid-column-gap: 1px; /* ANCHO DE LA BARRA DE NAVEGACION */
+
+}
+
+
+ .boton-registrar p{
+     width: 110px; height: 20px;
+     margin: 10px ;
+     text-align: center;
+     color: rgb(255, 255, 255);
+     line-height: 1.6em;
+
+ }
+
+
+ .boton-registrar{
+    width: 120px; height: 45px;
+    margin: 20px ;
+    background-color:rgba(230, 12, 12, 0.836); 
+    border-radius: 1em;
+    border-color: rgba(230, 12, 12, 0.836); 
+    cursor: pointer ;
+    transition: background-color 0s ;
+
+
+ }
+ .boton-registrar:hover{
+     background-color:rgb(126, 11, 11); 
+ }
+
+ /* AQUI INICIA EL ESTILO DEL BOTON INICIO SESION*/
+ .boton-inicio-sesion p{
+  width: 110px; height: 20px;
+  margin: 10px ;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.986);
+  line-height: 1.6em;
+
+}
+
+
+.boton-inicio-sesion{
+ width: 120px; height: 45px;
+ margin: 20px ;
+ background-color: rgba(236, 228, 228, 0.712); 
+ border-radius: 1em;
+ border-color:rgba(236, 228, 228, 0.808); 
+ cursor: pointer ;
+ transition: background-color 0s ;
+
+
+}
+.boton-inicio-sesion:hover{
+  background-color:gainsboro; 
+}
+
+
+
+ /* AQUI INICIA EL ESTILO DEL LA BARRA DE BUSQUEDA*/
+ .icono-buscar {
+  width: 600px; height: 45px;
+  margin: 20px ;
+  text-align: left;
+  display: flex;
+
+}
+
+
+
+ /* AQUI INICIA EL ESTILO DEL BOTON EXPLORAR*/
+
+.boton-explorar{
+ width: 75px; height: 30px;
+ margin: 20px ;
+ background-color: rgb(255, 255, 255); 
+ border-radius: 1em;
+ border-color:rgba(236, 228, 228, 0.808); 
+ cursor: pointer ;
+ transition: background-color 0s ;
+
+}
+
+.boton-explorar p{
+  width: 60px; height: 15px;
+  margin: 4px ;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.986);
+  line-height: 1.6em;
+
+}
+
+
+.boton-explorar:hover{
+  background-color:gainsboro; 
+}
+
+ /* AQUI INICIA EL ESTILO DEL BOTON HOY*/
+
+.boton-hoy{
+ width: 75px; height: 30px;
+ margin: 20px ;
+ background-color: rgb(255, 255, 255); 
+ border-radius: 1em;
+ border-color:rgba(236, 228, 228, 0.808); 
+ cursor: pointer ;
+ transition: background-color 0s ;
+
+}
+
+.boton-hoy p{
+  width: 70px; height: 10px;
+  margin: 3px ;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.986);
+  line-height: 1.6em;
+
+}
+
+
+.boton-hoy:hover{
+  background-color:gainsboro; 
+}
+/* AQUI INICIA EL ESTILO DEL BOTON PINTEREST */
+
+.boton-pinterest { 
+  width: 80px; height: 30px;
+  margin: 20px ; 
+  background-color: rgb(255, 255, 255); 
+  border-radius: 1em;
+  border-color:rgb(255, 250, 250); 
+  cursor: pointer ;
+ 
+ }
+ 
+ .boton-pinterest p{
+   display: inline;
+   text-align: top;
+   color: rgba(230, 12, 12, 0.836);
+   line-height: 1.6em;
+   font-size: medium;
+   
+ 
+ }
+ .boton-pinterest i{
+  display: inline;
+  align-items:start;
+  color:rgba(230, 12, 12, 0.836);
+  line-height: 1.6em;
+  size: 30px;
+  
+  
+
+}
+
+ 
+ .boton-pinterest:hover{
+   background-color:white; 
+ }
+
+
+
+ .titulo{
+     padding: 10px 200px 10px 200px;  /*Dimensiones "Explora lo mejor de Pinterest" */
+     text-align: center;
+     width: 100%;
+     font-family: 'Fira Sans', sans-serif;
+     font-size: x-large;
+ }
+
+ img {
+     max-width: 100%;
+     margin-bottom: 0.5em;
+     display: block;
+     outline: 2px solid white;
+
+ }
+
+ .estructura-imagenes{
+     /* display: grid; */
+     /* grid-template-columns: repeat(6, 1fr); */
+     /* padding: 10px 200px 10px 200px;  */
+    columns: 5 320px;
+    column-gap: 0.5em;
+ }
+
+
