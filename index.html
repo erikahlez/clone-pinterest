@@ -6,55 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/9a190d45e7.js" crossorigin="anonymous"></script>
  
-
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
-    
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans:wght@500&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="css/estilos.css">
-
-
-<!-- BARRA NAVEGACION -->
 
     <title>Pinterest</title>
 
 </head>
 
 <body>
-
- <!-- AQUI INICIA LA BARRA DE BUSQUEDA -->
- <nav class="barra-navegacion">
-    
-        <!-- <div class="boton-pinterest">  -->
-        <!-- <i class="fa-brands fa-pinterest"><p>Pinterest</p></i> -->
-
-        <div class="botones">  
  
-         <a href="#" class="btn btn-pinterest"><i class="fa-brands fa-pinterest"></i> Pinterest</a>
-         <a href="#" class="btn btn-hoy">Hoy</a>
-         <a href="#" class="btn btn-explorar">Explorar</a>
-
-        <div class="barra-busqueda">
-          <i class="fa-solid fa-magnifying-glass"> </i>
-          <input type="text"class="buscador" placeholder="Buscar imagenes">
+    <nav id="navbar-pinterest">
+        <div class="menu"> 
           
+              <a href="https://www.pinterest.com.mx/ideas/" class="btn btn-pinterest"><i class="fa-brands fa-pinterest"></i> Pinterest</a>
+              <a href="#" class="btn btn-hoy">Hoy</a>
+              <a href="#" class="btn btn-explorar">Explorar</a>
+              
+              <div class="barra-busqueda">
+              <i class="fa-solid fa-magnifying-glass"> </i>
+              <input type="text"class="busqueda" placeholder="Encuentra ideas sobre cenas fáciles, moda, etc.">
+              </div>
+
+              <a href="#" class="btn btn-inicio">Iniciar Sesion</a>
+              <a href="#" class="btn btn-registrar">Registrarse</a>
+          
+            
+               <ul class="menu-desplegable">
+                    <li><a href=""><i class="fa-solid fa-chevron-down"></i></a>
+                <ul>
+                    <li><a href="">Acerca de Pinterest</a></li>
+                    <li><a href="">Ver términos y privacidad</a></li>
+                    <li><a href="">Detener Solicitudes para iniciar sesion </a></li>
+                          
+                </ul>
+                    </li>
+           
+        
         </div>
 
 
-         <a href="#" class="btn btn-inicio">Iniciar Sesion</a>
-         <a href="#" class="btn btn-registrar">Registrarse</a>
-
-
-
-        </div>
-
-
- </nav> 
- <!-- AQUI TERMINA LA BARRA DE BUSQUEDA -->
-<!-- </header> -->
+    </nav > 
 
 
 <section class="titulo">
@@ -62,8 +57,7 @@
 </section>
 
 
-<!-- Aqui Empiezan las Imagenes -->
-<div class="estructura-imagenes">  
+  <div class="estructura-imagenes">  
     
     <img src="https://images.pexels.com/photos/5759903/pexels-photo-5759903.jpeg?auto=compress&cs=tinysrgb&w=600" >  
     <img src="https://images.pexels.com/photos/2187427/pexels-photo-2187427.jpeg?auto=compress&cs=tinysrgb&w=600" > 
@@ -100,8 +94,8 @@
 
 
 
-</div>
-<!-- Aqui Terminan las imagenes -->
+  </div>
+
 
 
 </body>
