@@ -1,76 +1,86 @@
 *{
   box-sizing: border-box;
-  /* outline: 1px solid limegreen; */
+  outline: 1px solid limegreen;
   font-family: 'Inter', sans-serif;
   font-family: 'Open Sans', sans-serif;
   padding: 0px;
   margin: 0px;
+
  }
 
 
 #navbar-pinterest {
-  width: 100%;
-  align-content: center;
-  margin-top: 15px;
-  
+   padding: 20px 10px;  /*  Dimensiones de la barra de navegacion  */
+   margin-left: 2.5%;
+   margin-right: 2.5%;
 }
+
+@media only screen and (max-width: 600px) {
+
+  .barra-busqueda input{
+    display: none;
+
+  }
+  .barra-busqueda{
+    display: none;
+  }
+
+  .barra-busqueda i{
+    display: none;
+  }
+
+
+}
+
 
 .menu{
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 5px 10px; 
-
-
+  /* padding: 5px 10px;  */
 }
+
 
 .btn {
 
 text-decoration: none;
 position: relative;
 margin: 5px;
+cursor: pointer;
 
 }
 .btn-pinterest{
 
   background-color: white;
-  color: rgba(230, 17, 17, 0.733);
+  color: rgba(211, 7, 7, 0.829);
   border-color: white;
   border-radius: 200px;
   transition: transform 0.3s ease;
   padding: 10px 20px;
- 
-
-
+  font-size: 1.3em;
 
 }
 
-.busqueda{
-  padding:  10px 100px;
-  border-color: rgb(121, 121, 121);
-  border-radius: 100px;
-
+.btn-pinterest:hover{
+  background-color:   rgb(233, 228, 228);
 }
 
-
-.barra-busqueda{
-  position: relative;  /* Se alinea el icono con el input */
-  
+.btn-inicio{
+  background-color: white;
+  color: black;
+  border-color:white;
+  border-radius: 300px;
+  transition: transform 0.3s ease;
+  padding: 10px 20px;
+  margin-left: .5%;
+  margin-right: .5%;
 }
-.barra-busqueda input{
-  width: max(50vw, 0px);
+.btn-inicio:hover{
 
+  background-color:  black;
+  color: white;
 }
-
-.barra-busqueda i{
-  position: absolute;
-  display: block;
-  bottom: .8rem;
-  left: 1rem;
-}
-
-
 
 .btn-hoy{
   background-color: white;
@@ -79,66 +89,189 @@ margin: 5px;
   border-radius: 200px;
   transition: transform 0.3s ease;
   padding: 10px 20px;
+  margin-left: .5%;
+  margin-right: .5%;
+}
+
+/* Lista desplegable de CREAR */
+
+.lista-desplegable-crear i{
+  position: relative;  /* esto hizo que dejara de moverse todo el boton crear al dar click */
+
+}
+
+.lista-desplegable-crear ul{ /* modifica las dimensiones de los li de la lista*/
+
+  padding: 12px ;
+  border-radius: 12px;
+}
+
+.lista-desplegable-crear :hover .btn-crear {
+
+  background-color:  white;
+  color: black;
+  /* border-radius: 5%; */
+  display: flex;   /* este flex hizo que se alineara el icono con el li "crear" */
 
 }
 
 
-.btn-explorar{
+.lista-desplegable-crear li{ /* modifica todos los li incluidos en todo ul lista desplegable */
+
+  position: relative; 
+  list-style:none;
+  display: inline-block;
+  transition: transform 0.3s ease;
   background-color: white;
   color: black;
   border-color: white;
-  border-radius: 200px;
-  transition: transform 0.3s ease;
-  padding: 10px 20px;
+  cursor: pointer;
 
 }
-.btn-inicio{
-  background-color: rgba(175, 175, 175, 0.24);
+
+
+.lista-desplegable-crear li a {
+  background-color:white;
+  color:black;
+  text-decoration:none;
+  padding: 10px ;
+  display:block; 
+  border-radius: 12px;
+
+
+}
+
+.lista-desplegable-crear li a:hover {   /* esto le da estilo a las listas dentro del ul */
+  background-color:white;
   color: black;
-  border-color:rgba(175, 175, 175, 0.24);
-  border-radius: 200px;
+  border-color: white;
   transition: transform 0.3s ease;
-  padding: 10px 10px;
+  background-color:  rgb(233, 228, 228);
 
 }
 
-.btn-inicio:hover{
+.lista-desplegable-crear li ul {
+  position: absolute;
+  right: 0; /* hace que no se pase a la derecha y se desplegue a la izquierda */
+  display:none;
+}
 
-  background-color:  rgba(175, 175, 175, 0.397);
+.lista-desplegable-crear li:hover > ul { /* hace que muestren los li dentro de ul cada que pasa el puntero encima */
+  display:block;
+  background-color:  white;  /* Esto cubrio el hueco que se formo en el listado */
+  width: max(15vw, .8px); /* Esto hizo mas delgado el borde */
+
+  }
+
+
+
+/* BARRA DE BUSQUEDA */
+
+
+.busqueda{
+  padding:  15px 100px;
+  border: 0;
+  border-radius: 100px;
+  background-color: rgb(233, 228, 228);
+
+}
+
+.barra-busqueda{
+  position: relative;  /* Se alinea el icono con el input */
+
+}
+.barra-busqueda input{
+  width: max(50vw, 0px);
+  border: none;
+  outline: none;
+  margin-left: 2%;
+  margin-right: .5%;
+
+
+}
+
+.barra-busqueda i{
+  position: absolute;
+  display: block;
+  bottom: 1rem;
+  left: 2rem;
 }
 
 
- .btn-registrar{
-  background-color: rgba(230, 17, 17, 0.733);
-  color: white;
-  border-color:  rgba(230, 17, 17, 0.733);
+
+
+ /* Diseño de Iconos  */
+
+ #notifications{
+
+  font-size: 1.3em;
   border-radius: 200px;
-  transition: transform 0.3s ease;
   padding: 10px 20px;
+  margin-left: 1.5%;
+  margin-right: .5%;
+  cursor: pointer;
+ }
+
+ #notifications:hover{
+  background-color:   rgb(233, 228, 228);
+}
+
+
+ #profile-img{
+
+  font-size: 1.3em;
+  border-radius: 200px;
+  padding: 10px 20px;
+  margin-left: .5%;
+  margin-right: .5%;
+  cursor: pointer;
+ }
+ #profile-img:hover{
+  background-color:   rgb(233, 228, 228);
+}
+
+ #message{
+  font-size: 1em;
+  margin-left: .5%;
+  margin-right: .5%;
+  cursor: pointer;
 
  }
 
-.btn-registrar:hover{
-  background-color: rgb(230, 17, 17);
+ #message .lista-desplegable-message  li i{
+ border-radius: 250px;
+ padding: 5px 5px;
+ }
+
+
+ #message i:hover{
+  background-color:  rgb(233, 228, 228) ;
+  }
+
+
+  .lista-desplegable-message li:hover > ul { /* hace que muestren los li dentro de ul cada que pasa el puntero encima */
+    display:block;
+    background-color:  white;  /* Esto cubrio el hueco que se formo en el listado */
+    width: max(15vw, .8px); /* Esto hizo mas delgado el bode */
+
+  }
+
+
+/* Aqui comienza el menu desplegable */
+
+
+.lista-desplegable-message ul {
+  border-radius: 12px;
+  padding: 12px ;
 }
 
-/* Aqui comienza e muenu desplegable */
-
-
-.menu-desplegable i{
-  color:rgb(90, 89, 89);
-
-
-}
-
-.menu-desplegable li{
-  float: left;
+.lista-desplegable-message  li{
   position: relative;
   list-style:none;
   display: inline-block;
 }
 
-.menu-desplegable li a {
+.lista-desplegable-message  li a {
   background-color:white;
   color:black;
   text-decoration:none;
@@ -148,52 +281,90 @@ margin: 5px;
 
 }
 
-.menu-desplegable li a:hover {   /* esto le da estilo a las listas dentro del ul */
+/* esto le da estilo a las listas dentro del ul */
+
+ .lista-desplegable-message li a:hover {
   background-color:white;
   text-decoration: underline;
+
 }
 
-.menu-desplegable li ul {
+.lista-desplegable-message   li ul {
   position: absolute;
   right: 0; /* hace que no se pase a la derecha y se desplegue a la izquierda */
   width: 150px;
   display:none;
+
 }
 
-.menu-desplegable li ul li ul{
-  position: absolute;
-  top:0;
-  right: 100px;
-}
 
-.menu-desplegable li:hover > ul {
+
+ .lista-desplegable-message  li:hover > ul {
   display:block;
 
 }
 
-
- .titulo{
-     padding: 40px 100px 40px 100px;  
-     text-align: center;
-     width: 100%;
-     font-family: 'Fira Sans', sans-serif;
-     font-size: x-large;
- }
+/* DISEÑO IMAGENES */
 
 
- img {
-     max-width: 100%;
-     margin-bottom: 0.5em;
-     display: block;
-     outline: 2px solid white;
-  
-
- }
-
- .estructura-imagenes{
+ #content{
 
     columns: 6 320px;
-    column-gap: 0.5em;
+    column-gap: 0.8em;
  }
+
+#content img{
+  max-width: 100%;
+  display: block;
+  outline: 2px solid white;
+  border-radius: 40px;
+  position: relative;  
+}
+
+ .dm {
+
+  text-decoration: none;
+  position: relative; 
+  margin: 10px;
+  cursor: pointer;
+
+  } 
+
+  
+
+.btn-dm :hover {
+  display: none;
+  background-color: aqua;
+}
+
+
+
+.card-image a{
+  border-radius: 40px;
+  color: white;
+  position: absolute;
+  background-color: rgba(211, 7, 7); 
+  padding: 10px 10px;
+  top: 0;
+  right:0;
+  margin-top: 40px;
+  margin-right: 25px;
+  /* display: none; */
+
+}
+
+.card-image:hover > img{
+  filter: brightness(75%);  
+  cursor: zoom-in;
+}
+
+.card-image :hover  a{
+  background-color: rgb(143, 32, 32.0); 
+
+}
+
+
+
+
 
 
