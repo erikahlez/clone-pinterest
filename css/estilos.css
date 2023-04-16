@@ -1,6 +1,6 @@
 *{
   box-sizing: border-box;
-  outline: 1px solid limegreen;
+  /* outline: 1px solid limegreen; */
   font-family: 'Inter', sans-serif;
   font-family: 'Open Sans', sans-serif;
   padding: 0px;
@@ -15,56 +15,42 @@
    margin-right: 2.5%;
 }
 
-@media only screen and (max-width: 600px) {
-
-  .barra-busqueda input{
-    display: none;
-
-  }
-  .barra-busqueda{
-    display: none;
-  }
-
-  .barra-busqueda i{
-    display: none;
-  }
-
-
-}
-
 
 .menu{
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* padding: 5px 10px;  */
+
 }
 
 
 .btn {
 
-text-decoration: none;
 position: relative;
 margin: 5px;
 cursor: pointer;
 
 }
-.btn-pinterest{
 
-  background-color: white;
-  color: rgba(211, 7, 7, 0.829);
-  border-color: white;
+/* BOTONES */
+
+#pinterest-icon {
+  margin-left: .5%;
+  margin-right: .5%;
   border-radius: 200px;
-  transition: transform 0.3s ease;
-  padding: 10px 20px;
-  font-size: 1.3em;
-
+}
+#pinterest-icon i{
+  font-size: 1.5em;
+  border-radius: 200px;
+  padding: 10px 10px;
+  cursor: pointer;
 }
 
-.btn-pinterest:hover{
-  background-color:   rgb(233, 228, 228);
+#pinterest-icon:hover {
+  background-color: rgb(233, 228, 228);
 }
+
 
 .btn-inicio{
   background-color: white;
@@ -93,7 +79,7 @@ cursor: pointer;
   margin-right: .5%;
 }
 
-/* Lista desplegable de CREAR */
+/* LISTA-CREAR */
 
 .lista-desplegable-crear i{
   position: relative;  /* esto hizo que dejara de moverse todo el boton crear al dar click */
@@ -110,13 +96,12 @@ cursor: pointer;
 
   background-color:  white;
   color: black;
-  /* border-radius: 5%; */
   display: flex;   /* este flex hizo que se alineara el icono con el li "crear" */
 
 }
 
 
-.lista-desplegable-crear li{ /* modifica todos los li incluidos en todo ul lista desplegable */
+.lista-desplegable-crear li{ /* modifica todos los li  */
 
   position: relative; 
   list-style:none;
@@ -141,7 +126,7 @@ cursor: pointer;
 
 }
 
-.lista-desplegable-crear li a:hover {   /* esto le da estilo a las listas dentro del ul */
+.lista-desplegable-crear li a:hover {  
   background-color:white;
   color: black;
   border-color: white;
@@ -152,14 +137,15 @@ cursor: pointer;
 
 .lista-desplegable-crear li ul {
   position: absolute;
-  right: 0; /* hace que no se pase a la derecha y se desplegue a la izquierda */
+  right: 0; /* Se despliega a la izquierda*/
   display:none;
+  z-index: 1;
 }
 
-.lista-desplegable-crear li:hover > ul { /* hace que muestren los li dentro de ul cada que pasa el puntero encima */
+.lista-desplegable-crear li:hover > ul { /* Para mostrar los li cada que pasa el puntero encima */
   display:block;
   background-color:  white;  /* Esto cubrio el hueco que se formo en el listado */
-  width: max(15vw, .8px); /* Esto hizo mas delgado el borde */
+   width: max(15vw, .8px);      /* Esto hizo mas delgado el borde  */
 
   }
 
@@ -168,7 +154,7 @@ cursor: pointer;
 /* BARRA DE BUSQUEDA */
 
 
-.busqueda{
+.finder{
   padding:  15px 100px;
   border: 0;
   border-radius: 100px;
@@ -198,9 +184,7 @@ cursor: pointer;
 }
 
 
-
-
- /* Diseño de Iconos  */
+ /* ICONOS */
 
  #notifications{
 
@@ -226,9 +210,12 @@ cursor: pointer;
   margin-right: .5%;
   cursor: pointer;
  }
+
  #profile-img:hover{
   background-color:   rgb(233, 228, 228);
 }
+
+/* LISTA-MESSAGE */
 
  #message{
   font-size: 1em;
@@ -249,15 +236,12 @@ cursor: pointer;
   }
 
 
-  .lista-desplegable-message li:hover > ul { /* hace que muestren los li dentro de ul cada que pasa el puntero encima */
+  .lista-desplegable-message li:hover > ul { /* Para mostrar los li cada que pasa el puntero encima */
     display:block;
-    background-color:  white;  /* Esto cubrio el hueco que se formo en el listado */
-    width: max(15vw, .8px); /* Esto hizo mas delgado el bode */
+    background-color:  white;  
+    width: max(15vw, .8px); /* Esto hizo mas delgado el borde */
 
   }
-
-
-/* Aqui comienza el menu desplegable */
 
 
 .lista-desplegable-message ul {
@@ -281,8 +265,6 @@ cursor: pointer;
 
 }
 
-/* esto le da estilo a las listas dentro del ul */
-
  .lista-desplegable-message li a:hover {
   background-color:white;
   text-decoration: underline;
@@ -291,12 +273,12 @@ cursor: pointer;
 
 .lista-desplegable-message   li ul {
   position: absolute;
-  right: 0; /* hace que no se pase a la derecha y se desplegue a la izquierda */
+  right: 0; /* Se despliega a la izquierda */
   width: 150px;
   display:none;
+  z-index: 1;
 
 }
-
 
 
  .lista-desplegable-message  li:hover > ul {
@@ -304,67 +286,83 @@ cursor: pointer;
 
 }
 
-/* DISEÑO IMAGENES */
+/*IMAGENES */
 
-
- #content{
-
-    columns: 6 320px;
-    column-gap: 0.8em;
- }
-
-#content img{
-  max-width: 100%;
-  display: block;
-  outline: 2px solid white;
-  border-radius: 40px;
-  position: relative;  
+#content {
+  columns: 6 320px;
+  column-gap: 0.8em;
 }
 
- .dm {
 
-  text-decoration: none;
-  position: relative; 
+.dm {
+  position: relative;
   margin: 10px;
+
+}
+
+
+.card-image {
+  position: relative;
   cursor: pointer;
+}
 
-  } 
+/* Cualquier etiqueta a que se encuentre dentro de un elemento div dentro de una clase card-image no será visible. */
 
-  
-
-.btn-dm :hover {
+.card-image div a {
   display: none;
-  background-color: aqua;
 }
 
+/* Cuando se pase el cursor sobre un elemento card-image, cualquier etiqueta a dentro de un elemento div dentro de la clase card-image será visible. */
+.card-image:hover div a {
+  display: block;
+}
 
+.card-image img {
 
-.card-image a{
   border-radius: 40px;
-  color: white;
-  position: absolute;
-  background-color: rgba(211, 7, 7); 
-  padding: 10px 10px;
-  top: 0;
-  right:0;
-  margin-top: 40px;
-  margin-right: 25px;
-  /* display: none; */
-
+  max-width: 100%;
+  height: auto;
 }
 
-.card-image:hover > img{
-  filter: brightness(75%);  
+.card-image img:hover {
+  filter: brightness(75%);
   cursor: zoom-in;
 }
 
-.card-image :hover  a{
-  background-color: rgb(143, 32, 32.0); 
-
+.card-image a {
+  border-radius: 40px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color:  rgba(211, 7, 7);
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  /* Posiciona el botón en relación con su elemento principal, en este caso la imagen. */
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 15px;
 }
 
 
+@media only screen and (max-width: 600px) {
+  .barra-busqueda input {
+    display: none;
+  }
+  .barra-busqueda i {
+    display: none;
+  
+  }
+  .card-image img {
+    padding: .8px 80px;
+      
+  } 
+  .card-image  a {
+     margin-inline-end: 20%;
+    }
+  #navbar-pinterest {
+      padding: 25px;
+  
+}
 
-
-
-
+}
